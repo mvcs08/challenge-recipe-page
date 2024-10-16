@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    --White: hsl(0, 0%, 100%);
+--Stone-100: hsl(30, 54%, 90%);
+--Stone-150: hsl(30, 18%, 87%);
+--Stone-600: hsl(30, 10%, 34%);
+--Stone-900: hsl(24, 5%, 18%);
+
+--Brown-800: hsl(14, 45%, 36%);
+
+--Rose-800: hsl(332, 51%, 32%);
+--Rose-50: hsl(330, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* css global */
+h2 {
+    color: var(--Brown-800);
+    margin: .8em 0;
+    font-family: "Young Serif", sans-serif;
+}
+
+h1 {
+    font-family: "Young Serif", sans-serif;
+    font-size: 36px;
+    line-height: 1.1em;
+    margin-bottom: .5em;
+}
+li {
+    color: var(--Stone-600);
+}
+
+body {
+    color: var(--Stone-600);
+    font-family: "Outfit", sans-serif;
+}
+/* end css global */
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.wraper {
+    padding: 2em;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.time {
+    background-color: var(--Rose-50);
+    padding: 1.25em;
+    border-radius: .8em;
+    margin-top: 1em;
+    
+}
+
+.time h3 {
+    color: var(--Rose-800);
+}
+
+.time ul, 
+.ingredients ul {
+    list-style-type: disc;
+    padding: 0.3em 1.5em;
+}
+.time li, 
+.ingredients li,
+.instructions li {
+    padding-inline-start: .8em;
+}
+
+.time li::marker{
+    color: var(--Rose-800)
+}
+
+.ingredients, .instructions {
+    border-bottom: 1px solid var(--Stone-150);
+    padding-block-end: 15px;
+}
+
+.instructions ol {
+    padding: 1em 1.5em;
+    
+}
+
+.bold {
+    font-weight: bold;
+    color: var(--Stone-600);
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td {
+    padding: 1em;
+    border-bottom: 1px solid var(--Stone-150);
+}
+
+
+@media (min-width: 40em) {
+    body {
+        background-color: var(--Stone-100);
+        padding: 4em;
+    }
+
+    main {
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 1.5em;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .image-top {
+        padding: 1.2em;
+    }
+
+    .image-top img {
+        border-radius: 1.1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .wraper {
+        padding: 1em;
+    }
+    .time, .ingredients, .instructions {
+        padding: 1em;
+    }
+}
